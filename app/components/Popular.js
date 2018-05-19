@@ -7,10 +7,10 @@ function SelectLanguage (props) {
 
     return (
         <ul className='languages'>
-            {languages.map((lang) => {
+            {languages.map(function (lang) {
                 return (
                     <li 
-                        style={ lang === props.selectedLanguage ? {color: '#d0021b'}: null } 
+                        style={ lang === props.selectedLanguage ? {color: '#d0021b'} : null } 
                         onClick={props.onSelect.bind(null, lang)} 
                         key={lang}> 
                         {lang} 
@@ -21,7 +21,7 @@ function SelectLanguage (props) {
     )
 }
 
-function RepoGrid (prop) {
+function RepoGrid (props) {
     return (
         <ul className='popular-list'>
             {props.repos.map(function (repo, index) {
